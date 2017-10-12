@@ -1,0 +1,15 @@
+git clone https://github.com/zhanghan1990/zipline
+cd zipline
+sudo yum install python-devel
+sudo yum install python-pip
+sudo yum install mongodb
+sudo yum install virtualenv
+sudo yum install python-tk
+virtualenv zipline_env
+source zipline_env/bin/activate
+sudo pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  --upgrade pip
+sudo pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
+python setup.py install
+sudo service mongodb start
+pip install xlrd
+pip3 install jupyter
